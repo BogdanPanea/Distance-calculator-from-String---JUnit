@@ -1,0 +1,18 @@
+Dec 15, 2018 12:19:38 PM ro.bogdanpanea.calculator.SumFromStringExpression listOperands
+INFO: Operand{distance=10, unit='cm', unitConstan=0.01}
+Dec 15, 2018 12:19:39 PM ro.bogdanpanea.calculator.SumFromStringExpression listOperands
+INFO: Operand{distance=1, unit='m', unitConstan=1.0}
+Dec 15, 2018 12:19:39 PM ro.bogdanpanea.calculator.SumFromStringExpression listOperands
+INFO: Operand{distance=-10, unit='mm', unitConstan=0.001}
+Dec 15, 2018 12:19:39 PM ro.bogdanpanea.calculator.Main main
+INFO: --------SortedByUnit---------
+Dec 15, 2018 12:19:39 PM ro.bogdanpanea.calculator.SumFromStringExpression listOperands
+INFO: Operand{distance=-10, unit='mm', unitConstan=0.001}
+Dec 15, 2018 12:19:39 PM ro.bogdanpanea.calculator.SumFromStringExpression listOperands
+INFO: Operand{distance=10, unit='cm', unitConstan=0.01}
+Dec 15, 2018 12:19:39 PM ro.bogdanpanea.calculator.SumFromStringExpression listOperands
+INFO: Operand{distance=1, unit='m', unitConstan=1.0}
+Dec 15, 2018 12:19:39 PM ro.bogdanpanea.calculator.Main main
+INFO: 1090 mm
+Dec 15, 2018 12:19:39 PM ro.bogdanpanea.calculator.Main main
+INFO: 10.9 dm
