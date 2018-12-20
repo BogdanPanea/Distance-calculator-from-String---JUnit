@@ -4,12 +4,12 @@ public class Operand {
 
     private Integer distance;
     private String unit;
-    private Double unitConstan;
+    private Double unitCoefficient;
 
-    public Operand(Integer distance, String unit, double unitConstan) {
+    public Operand(Integer distance, String unit, double unitCoefficient) {
         this.distance = distance;
         this.unit = unit;
-        this.unitConstan = unitConstan;
+        this.unitCoefficient = unitCoefficient;
     }
 
     Integer getDistance() {
@@ -21,7 +21,7 @@ public class Operand {
     }
 
     Double getUnitConstant() {
-        return unitConstan;
+        return unitCoefficient;
     }
 
     @Override
@@ -29,7 +29,7 @@ public class Operand {
         return "Operand{" +
                 "distance=" + distance +
                 ", unit='" + unit + '\'' +
-                ", unitConstan=" + unitConstan +
+                ", unitCoefficient=" + unitCoefficient +
                 '}';
     }
 }

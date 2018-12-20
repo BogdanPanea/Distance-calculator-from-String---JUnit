@@ -9,15 +9,45 @@ public class Main {
     public static void main(String[] args) {
 
 
+        String test = "-10 cm + 1 m - 10 mm";
+        String unit = "dm";
 
-        String test= "10 cm + 1 m - 10 mm";
-        SumFromStringExpression calculator = new SumFromStringExpression( test );
-        calculator.generateOperandsList();
-        calculator.listOperands();
-        LOGGER.info( "--------SortedByUnit---------" );
-        calculator.sortListOperandsByUnit();
-        calculator.listOperands();
-        LOGGER.info( calculator.returnDistanceInLowestUnit());
-        LOGGER.info( calculator.returnDistanceInCustomUnit("dm"));
+        printDistanceInLowestUnit(test);
+        LOGGER.info( "--------CustomUnit---------" );
+        printDistanceInCustomUnit (test, unit);
+
+
+    }
+
+    static void printDistanceInLowestUnit (String expression) {
+
+        try {
+
+            DistanceFromStringExpression calculator = new DistanceFromStringExpression( expression );
+            calculator.generateOperandsList();
+            LOGGER.info( calculator.formatDistanceInLowestUnit());
+
+        } catch (DistanceFromExpressionException e) {
+
+            e.printStackTrace();
+        }
+
+
+    }
+
+    static void printDistanceInCustomUnit (String expression, String unit) {
+
+        try {
+
+            DistanceFromStringExpression calculator = new DistanceFromStringExpression( expression );
+            calculator.generateOperandsList();
+            LOGGER.info( calculator.formatDistanceInCustomUnit(unit));
+
+        } catch (DistanceFromExpressionException e) {
+
+            e.printStackTrace();
+        }
+
+
     }
 }
