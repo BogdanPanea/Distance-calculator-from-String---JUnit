@@ -1,6 +1,6 @@
 package ro.bogdanpanea.calculator;
 
-public enum  UnitsConstant {
+public enum UnitsConstant {
 
     mm(0.001), cm(0.01), dm(0.1), m(1), km(1000);
 

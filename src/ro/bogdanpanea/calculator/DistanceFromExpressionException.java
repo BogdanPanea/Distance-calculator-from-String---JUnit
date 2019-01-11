@@ -6,7 +6,7 @@ public class DistanceFromExpressionException extends Exception {
 
     DistanceFromExpressionException(String message, String err) {
 
-        super( message );
+        super(message);
         this.errCode = err;
     }
 

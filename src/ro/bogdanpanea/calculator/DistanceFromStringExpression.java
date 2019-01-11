@@ -1,7 +1,6 @@
 package ro.bogdanpanea.calculator;
 
 import java.util.*;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DistanceFromStringExpression {
@@ -9,8 +8,6 @@ public class DistanceFromStringExpression {
     private static Logger LOGGER = Logger.getLogger(Main.class.getName());
     private String expression;
     private List<Operand> operandsList = new ArrayList<>();
-    private Operand operand;
-
 
     public DistanceFromStringExpression(String expression) throws DistanceFromExpressionException {
 
@@ -76,7 +73,7 @@ public class DistanceFromStringExpression {
 
     void sortOperandsByUnitConstants() {
 
-        Collections.sort(operandsList, new UnitsCoefficientComparator());
+        operandsList.sort(new UnitsCoefficientComparator());
     }
 
     String formatDistanceInLowestUnit() {
@@ -158,4 +155,20 @@ public class DistanceFromStringExpression {
 
         return false;
     }
+
+    public void printDistanceInLowestUnit(String expression) throws DistanceFromExpressionException {
+
+        generateOperandsList();
+        LOGGER.info(formatDistanceInLowestUnit());
+
+    }
+
+    public void printDistanceInCustomUnit(String expression, String unit) throws DistanceFromExpressionException {
+
+        generateOperandsList();
+        LOGGER.info(formatDistanceInCustomUnit(unit));
+
+    }
+
+
 }

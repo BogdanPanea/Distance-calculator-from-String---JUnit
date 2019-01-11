@@ -1,5 +1,6 @@
 package ro.bogdanpanea.calculator;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Main {
@@ -12,42 +13,28 @@ public class Main {
         String test = "-10 cm + 1 m - 10 mm";
         String unit = "dm";
 
-        printDistanceInLowestUnit(test);
-        LOGGER.info( "--------CustomUnit---------" );
-        printDistanceInCustomUnit (test, unit);
-
-
-    }
-
-    static void printDistanceInLowestUnit (String expression) {
 
         try {
 
-            DistanceFromStringExpression calculator = new DistanceFromStringExpression( expression );
-            calculator.generateOperandsList();
-            LOGGER.info( calculator.formatDistanceInLowestUnit());
+            PerformanceRepository performanceRepository = new PerformanceRepository();
+            DistanceFromStringExpression calculator = new DistanceFromStringExpression(test);
+
+            performanceRepository.savePerformance(test);
+            performanceRepository.savePerformance(test, unit);
+
+            LOGGER.info(performanceRepository.getMethodPerformances().toString());
+
+            calculator.printDistanceInLowestUnit(test);
+            LOGGER.info("--------CustomUnit---------");
+            calculator.printDistanceInCustomUnit(test, unit);
+
 
         } catch (DistanceFromExpressionException e) {
 
-            e.printStackTrace();
+            LOGGER.log(Level.SEVERE, e.getMessage());
         }
-
 
     }
 
-    static void printDistanceInCustomUnit (String expression, String unit) {
 
-        try {
-
-            DistanceFromStringExpression calculator = new DistanceFromStringExpression( expression );
-            calculator.generateOperandsList();
-            LOGGER.info( calculator.formatDistanceInCustomUnit(unit));
-
-        } catch (DistanceFromExpressionException e) {
-
-            e.printStackTrace();
-        }
-
-
-    }
 }

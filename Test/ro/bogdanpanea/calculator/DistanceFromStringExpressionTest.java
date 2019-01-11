@@ -9,12 +9,11 @@ public class DistanceFromStringExpressionTest {
     private DistanceFromStringExpression distanceFromStringExpression;
 
 
-
     @Test
     public void testReturnDistanceInLowestUnit() throws DistanceFromExpressionException {
 
         String test = "1m+4dm-345cm";
-        distanceFromStringExpression = new DistanceFromStringExpression( test );
+        distanceFromStringExpression = new DistanceFromStringExpression(test);
         distanceFromStringExpression.generateOperandsList();
         assertEquals("-205 cm", distanceFromStringExpression.formatDistanceInLowestUnit());
 
@@ -24,7 +23,7 @@ public class DistanceFromStringExpressionTest {
     public void testReturnDistanceInLowestUnit1() throws DistanceFromExpressionException {
 
         String test = "-1m+4dm-345cm";
-        distanceFromStringExpression = new DistanceFromStringExpression( test );
+        distanceFromStringExpression = new DistanceFromStringExpression(test);
         distanceFromStringExpression.generateOperandsList();
         assertEquals("-405 cm", distanceFromStringExpression.formatDistanceInLowestUnit());
 
@@ -35,8 +34,8 @@ public class DistanceFromStringExpressionTest {
 
         String test = "1m+4dm-345cm";
         String newUnit = "dm";
-        distanceFromStringExpression = new DistanceFromStringExpression( test );
+        distanceFromStringExpression = new DistanceFromStringExpression(test);
         distanceFromStringExpression.generateOperandsList();
-        assertEquals("-20.5 dm", distanceFromStringExpression.formatDistanceInCustomUnit( newUnit ));
+        assertEquals("-20.5 dm", distanceFromStringExpression.formatDistanceInCustomUnit(newUnit));
     }
 }
