@@ -1,8 +1,8 @@
-Ian 11, 2019 5:18:38 PM ro.bogdanpanea.calculator.Main main
-INFO: [MethodPerformance{methodType='lowestUnit', input='-10 cm + 1 m - 10 mm', executinTime=1743873}, MethodPerformance{methodType='customUnit', input='-10 cm + 1 m - 10 mm', executinTime=3237137}]
-Ian 11, 2019 5:18:38 PM ro.bogdanpanea.calculator.DistanceFromStringExpression printDistanceInLowestUnit
+Ian 12, 2019 12:02:32 PM ro.bogdanpanea.calculator.Main main
+INFO: [MethodPerformance{methodType='lowestUnit', input='-10 cm + 1 m - 10 mm', executinTime=3657129}, MethodPerformance{methodType='customUnit', input='-10 cm + 1 m - 10 mm', executinTime=3971642}]
+Ian 12, 2019 12:02:32 PM ro.bogdanpanea.calculator.DistanceFromStringExpression printDistanceInLowestUnit
 INFO: 890 mm
-Ian 11, 2019 5:18:38 PM ro.bogdanpanea.calculator.Main main
+Ian 12, 2019 12:02:32 PM ro.bogdanpanea.calculator.Main main
 INFO: --------CustomUnit---------
-Ian 11, 2019 5:18:38 PM ro.bogdanpanea.calculator.DistanceFromStringExpression printDistanceInCustomUnit
+Ian 12, 2019 12:02:32 PM ro.bogdanpanea.calculator.DistanceFromStringExpression printDistanceInCustomUnit
 INFO: 19.8 dm

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DistanceCalculatorFromString.iml" filepath="$PROJECT_DIR$/DistanceCalculatorFromString.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Distance-calculator-from-String---JUnit.iml" filepath="$PROJECT_DIR$/Distance-calculator-from-String---JUnit.iml" />
     </modules>
   </component>
 </project>
